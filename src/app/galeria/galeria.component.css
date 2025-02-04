@@ -1,0 +1,31 @@
+.gallery {
+    text-align: center;
+    background-color: #fff0f0;
+    padding: 50px 20px;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    color: #d90000;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .photo-item p {
+    color: #d90000;
+    font-weight: bold;
+    margin-top: 10px;
+  }

@@ -1,0 +1,9 @@
+<div class="gallery">
+  <h2>Galería del Día de San Valentín</h2>
+  <div class="photo-grid">
+    <div class="photo-item" *ngFor="let photo of photos">
+      <img [src]="photo.url" [alt]="photo.title" />
+      <p>{{ photo.title }}</p>
+    </div>
+  </div>
+</div>
