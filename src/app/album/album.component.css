@@ -1,0 +1,189 @@
+/* Estilos generales del álbum */
+.album-container {
+    text-align: center;
+    background-color: #c57575;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Título de la página */
+  .title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fcf6f6;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Secciones de videos */
+  .video-section {
+    margin-bottom: 50px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .video-card {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: 400px; /* Ajustamos la altura para mantener un formato vertical */
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video se ajuste sin distorsión */
+    object-position: center center; /* Asegura que el centro del video esté visible */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efecto de hover en los videos (aumentar tamaño) */
+  .video-thumbnail:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Información del video */
+  .video-info {
+    margin-top: 10px;
+    color: #d30000;
+    font-size: 18px;
+  }
+  
+  .video-info h3 {
+    font-weight: bold;
+  }
+  
+  /* Corazones de fondo */
+  .album-container::before {
+    content: '❤️';
+    font-size: 150px;
+    color: rgb(158, 8, 8);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  
+  .video-card::after {
+    content: '❤️';
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.3;
+  }
+  
+  body::after {
+    content: '❤️';
+    font-size: 80px;
+    color: #bd0000;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    animation: heartAnimation 3s ease-in-out infinite;
+  }
+  
+  @keyframes heartAnimation {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+    100% { transform: scale(0); opacity: 0; }
+  }
+  
+  .gallery-item {
+    width: 50px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 24%;
+  }
+
+  button{
+      height: 3rem;
+      border-radius: 10px;
+      margin-top: 1%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+  }
+  
+  .close {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+  }
+
+  .sticker {
+    position: absolute;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .heart-sticker {
+    width: 50px;
+    animation-duration: 4s;
+  }
+  
+  .flower-sticker {
+    width: 30px;
+    animation-duration: 7s;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+
+
+  
+
+  
